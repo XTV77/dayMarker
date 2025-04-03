@@ -1,16 +1,24 @@
 const root_ = ReactDOM.createRoot(document.getElementById("root"));
 <div className='box'>asd</div>;
 
-let mass = [];
+let DaysList = [];
+let dayStatus = ["url(sourse/Kuka.png) center/90% no-repeat"];
+
+const changeIcon = (elem) => {
+  elem.target.style.background = dayStatus[0];
+};
 
 for (let i = 0; i < 61; i++) {
   if ((i + 1) % 7 == 0 || (i + 2) % 7 == 0)
-    mass.push(
-      <div style={{ border: "2px solid #df1313" }} className='box'></div>
+    DaysList.push(
+      <div
+        style={{ border: "2px solid #df1313" }}
+        className='box'
+        onClick={changeIcon}
+      ></div>
     );
-  else mass.push(<div className='box'></div>);
+  else DaysList.push(<div className='box'></div>);
 }
 
-let someElement = mass.map((item) => item);
-
-root_.render(someElement);
+let calendar = DaysList.map((item) => item);
+root_.render(calendar);
