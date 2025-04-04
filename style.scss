@@ -82,6 +82,7 @@ $sqsz: 40px; //square size
 
 main {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -104,4 +105,15 @@ main {
   aspect-ratio: 1/1;
   border: 2px solid black;
   border-radius: 4px;
+  background: "";
+}
+#update {
+  position: absolute;
+  top: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  width: $sqsz;
+  aspect-ratio: 1/1;
+  background: url(sourse/add_button.png) no-repeat center/100%;
 }
